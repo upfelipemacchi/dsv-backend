@@ -31,7 +31,7 @@ exports.buscar = async (req, res) => {
 
 
 exports.atualizar = async (req, res) => {
-    const id = req.body.id;
+    const id = req.params.id;
     const data = req.body;
 
     const usuario = await Usuario.update(data, {where: {id : id}});
